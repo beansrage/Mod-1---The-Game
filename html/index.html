@@ -11,6 +11,52 @@
 <body>
   
 <div id="background"></div>
-   
+    <div id ='p1'></div>
+    <div class='boss1'></div>
+    <div class='bullet'></div>
+    <div id='missles'></div>
+<script>
+    let p1 = {
+        top: 700,
+        left: 500
+        
+    };
+
+    document.onkeydown = function(e){
+        console.log(e.keyCode)
+        if (e.keyCode === 68){
+            console.log('right')
+            p1.left = p1.left + 15;
+            moveLr()
+        }
+        else if (e.keyCode === 65) {
+            console.log('Left')
+            p1.left = p1.left - 15;
+            moveLr()
+        } 
+        else if (e.keyCode === 87){
+            console.log('UP')
+            p1.top = p1.top - 15; 
+            moveUd()
+        } else if (e.keyCode === 83){
+            console.log('Down')
+            p1.top = p1.top + 15; 
+            moveUd()
+        }  
+        // else if (e.keyCode === 32){
+            // console.log('shoot')
+        // }
+    
+         
+        function moveLr() {
+            document.getElementById('p1').style.left = p1.left + 'px';
+        }
+        function moveUd() {
+            document.getElementById('p1').style.top = p1.top + 'px'
+        }
+       
+
+}
+</script>
 </body>
 </html>
