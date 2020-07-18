@@ -4,5 +4,6 @@ invaders rip
 // wish list
 restart button
 more than one round of play
+loading/splash screen 
 
 

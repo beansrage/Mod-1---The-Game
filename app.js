@@ -189,7 +189,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 }
 
-invaderId = setInterval(moveInvaders, 50)
+invaderId = setInterval(moveInvaders, 250)
 
 
         

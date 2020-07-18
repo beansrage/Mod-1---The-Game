@@ -24,20 +24,20 @@
 }
 
 .boom {
-    /* background-image: url('imgs/explosion.png'); */
+    background-image: url('imgs/explosionrs.png');
     /* background-color: crimson; */
   
 
 }
 
 .laser {
-    /* background-image: url('imgs/bullet.png'); */
-    background-color: palegreen;
+    background-image: url('imgs/bullet.png');
+    /* background-color: palegreen; */
 }
 
 .laser2 {
-    /* background-image: url('imgs/bullet.png'); */
-    background-color: darkturquoise;
+    background-image: url('imgs/bullet.png');
+    /* background-color: darkturquoise; */
 }
 
 
