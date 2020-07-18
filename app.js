@@ -1,6 +1,3 @@
-//////original js file
-
-// 
 
 ///listens for page to load, then loads content
 document.addEventListener('DOMContentLoaded', () => {
@@ -136,11 +133,11 @@ document.addEventListener('DOMContentLoaded', () => {
         
         //move laser2
         function moveLaser2() {
-            squares[currentLaser2Index].classList.remove('laser2')
+            squares[currentLaser2Index].classList.remove('laser')
             currentLaser2Index-=width
-            squares[currentLaser2Index].classList.add('laser2')
+            squares[currentLaser2Index].classList.add('laser')
             if (squares[currentLaser2Index].classList.contains('invader')){
-                squares[currentLaser2Index].classList.remove('laser2')
+                squares[currentLaser2Index].classList.remove('laser')
                 squares[currentLaser2Index].classList.remove('invader')
                 squares[currentLaser2Index].classList.add('boom')
 
@@ -166,25 +163,33 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }document.addEventListener('keypress', shoot2)
     
-    //game over 
-     if(squares[currentShooterIndex].classList.contains('invader', 'shooter')) {
+            //win state\\ 
+    if(alienInvadersTakenDown.length === alienInvaders.length) {
+        resultDisplay.textContent = 'Winner!!'
+        clearInterval(invaderId)
+        alert('...ready for more?')
+    } 
+
+
+    //game over state 
+    if(squares[currentShooterIndex].classList.contains('invader', 'shooter')) {
         resultDisplay.textContent = 'Game Over'
         squares[currentShooterIndex].classList.add('boom')
         clearInterval(invaderId)
-    }for (let i=0; i<=alienInvaders.length-1; i++) {
+    }
+    for (let i=0; i<=alienInvaders.length-1; i++) {
         if(alienInvaders[i]>(squares.length-(width-1))){
             resultDisplay.textContent = 'Game Over'
             clearInterval(invaderId)
         }
     }
-    //win 
-    if(alienInvadersTakenDown.length === alienInvaders.length) {
-        resultDisplay.textContent = 'Winner!!'
-        clearInterval(invaderId)
-    } 
+
+
+    //restart function 
+
 }
 
-invaderId = setInterval(moveInvaders, 500)
+invaderId = setInterval(moveInvaders, 50)
 
 
         
