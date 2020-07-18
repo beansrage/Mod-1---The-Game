@@ -18,7 +18,13 @@ document.addEventListener('DOMContentLoaded', () => {
             31,32,33,34,35,36,37,38,39
         ]
 
+        //draw invaders 
+    alienInvaders.forEach(invader => squares[currentInvaderIndex + invader].classList.add('invader'))
+
+    //draw the shooter 
+    squares[currentShooterIndex].classList.add('shooter')
+    squares[currentShooter2Index].classList.add('shooter2')
         
 
-        
+
 }) 
