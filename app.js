@@ -1,5 +1,6 @@
 //////original js file
 
+// 
 
 ///listens for page to load, then loads content
 document.addEventListener('DOMContentLoaded', () => {
@@ -15,10 +16,10 @@ document.addEventListener('DOMContentLoaded', () => {
     let direction = 1
     let invaderId
 
-        function reset() {
-            //resets 
 
-    }
+
+
+    
     ///defines aliens in array
     const alienInvaders = [
         0,1,2,3,4,5,6,7,8,9,15,16,
@@ -183,31 +184,10 @@ document.addEventListener('DOMContentLoaded', () => {
     } 
 }
 
-
 invaderId = setInterval(moveInvaders, 500)
-    
-
-    
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        
 }) 
+
+
